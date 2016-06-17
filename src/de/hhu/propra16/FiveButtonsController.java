@@ -18,6 +18,7 @@ public class FiveButtonsController implements Initializable {
     @FXML GridPane gridPane;
 
     Button alertButton = new Button("ALERT!");
+    Button exitButton = new Button("EXIT");
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -27,6 +28,10 @@ public class FiveButtonsController implements Initializable {
             alert.setTitle("YOU HAVE TOO MANI ");
             alert.setContentText("TOO MANY BUTTONS");
             alert.showAndWait();
+        });
+        gridPane.add(exitButton,0,2);
+        exitButton.setOnAction(e -> {
+            System.exit(0);
         });
     }
 }
