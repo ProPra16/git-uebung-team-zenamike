@@ -19,6 +19,8 @@ public class FiveButtonsController implements Initializable {
 
     Button alertButton = new Button("ALERT!");
 
+    Button message = new Button("Message");
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         gridPane.add(alertButton, 0,1);
@@ -27,6 +29,11 @@ public class FiveButtonsController implements Initializable {
             alert.setTitle("YOU HAVE TOO MANI ");
             alert.setContentText("TOO MANY BUTTONS");
             alert.showAndWait();
+        });
+
+        gridPane.add(message, 0,2);
+        message.setOnAction( e -> {
+            System.out.println("MESSAGE");
         });
     }
 }
