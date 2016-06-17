@@ -18,6 +18,7 @@ public class FiveButtonsController implements Initializable {
     @FXML GridPane gridPane;
 
     Button alertButton = new Button("ALERT!");
+    Button exitButton = new Button("EXIT");
 
     Button message = new Button("Message");
 
@@ -34,6 +35,11 @@ public class FiveButtonsController implements Initializable {
         gridPane.add(message, 0,2);
         message.setOnAction( e -> {
             System.out.println("MESSAGE");
+        });
+
+        gridPane.add(exitButton,0,3);
+        exitButton.setOnAction(e -> {
+            System.exit(0);
         });
     }
 }
